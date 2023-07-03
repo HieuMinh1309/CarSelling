@@ -174,7 +174,7 @@
     <!-- Carousel End -->
 
 
-    <!-- Service Start -->
+    <!-- category Start -->
         <div class="container">
             <h3 class="popularfont">Popular Makes</h3>
             <div id="directorypress-category-6025" class="cat-style-5">
@@ -318,6 +318,7 @@
                                 </div>
                             </div>
                 </div>
+                <button id="nutt"><a href="">View All Categories</a></button>
             </div>
         </div>		
             </div>
