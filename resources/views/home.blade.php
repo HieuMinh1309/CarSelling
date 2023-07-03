@@ -98,6 +98,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <!-- nút search -->
+                
                 <i class='bx bx-search' id="search-icon"></i>
                 <div class="search-box container">
                 

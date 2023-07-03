@@ -24,6 +24,7 @@
     display: flex;
     left: 0px;
     width: 100%;
+    padding-left: 60px;
 }
 
 .noidung .title-info{
@@ -138,6 +139,7 @@ input.form-control-1, select.form-control-1{
 .all-bank{
     display: flex;
     text-align: center;
+    margin-left: 50px;
 }
 .one_bank{
     display: flex;
@@ -174,6 +176,7 @@ p{
 }
 .information{
     width: 50%;
+    padding-left: 265px;
 }
 
 
@@ -183,5 +186,9 @@ p{
     border-radius: 5px;
     background-color: #F92525;
     margin-top:30px;
-    margin-left: 70px;
+    margin-left: 264px;
+}
+
+.condition{
+    padding-right: 200px;
 }
