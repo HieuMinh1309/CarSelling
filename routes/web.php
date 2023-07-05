@@ -53,6 +53,11 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/cars', function () {
-    return view('cars');
+// còn thiếu controller
+Route::get('/cardetail', function () {
+    return view('cardetail');
+});
+
+Route::get('/carlist', function () {
+    return view('carlist');
 });

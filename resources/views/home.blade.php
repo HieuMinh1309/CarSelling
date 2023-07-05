@@ -98,14 +98,14 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <!-- nút search -->
-                
+
                 <i class='bx bx-search' id="search-icon"></i>
                 <div class="search-box container">
                 
                 </div>
                 <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
-                <a href="" class="nav-item nav-link">Cars</a>
+                <a href="/carlist" class="nav-item nav-link">Cars</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
