@@ -1302,3 +1302,11 @@ div #search-test1{
 	margin-left: 15%;
 	background-repeat: no-repeat;
 }
+
+.backgroundsize{
+	height: 900px !important;
+}
+
+.fontwhite{
+	color: white !important;
+}
