@@ -205,9 +205,9 @@
                             <div class="imgbox">
                                 <div class="mainpic">
                                 @php
-                                $carImage = str_replace('D:\\xampp\\tmp\\', '', $car->carImage);
+                                $carImage2 = str_replace('D:\\xampp\\tmp\\', '', $car->carImage2);
                                 @endphp
-                                <img src="{{ asset('upload/'. $carImage) }}">
+                                <img src="{{ asset('upload/'. $carImage2) }}">
                                 </div>
                             </div>
                       </div>

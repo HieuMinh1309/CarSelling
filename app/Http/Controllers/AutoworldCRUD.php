@@ -42,6 +42,9 @@ class AutoworldCRUD extends Controller
 
         $car = new AutoworldCRUDs;
         $car->carImage = $filename;
+        $car->carImage2 = $filename;
+        $car->carImage3 = $filename;
+        $car->carImage4 = $filename;
         $car->carName = $request->input('carName');
         $car->carBrand = $request->input('carBrand');
         $car->carID = $carID;
@@ -91,6 +94,10 @@ class AutoworldCRUD extends Controller
         $car->carYear = $request->input('carYear');
         $car->carModel = $request->input('carModel');
         $car->carImage = $request->input('carImage');
+        $car->carImage2 = $request->input('carImage2');
+        $car->carImage3 = $request->input('carImage3');
+        $car->carImage4 = $request->input('carImage4');
+
         $car->carDescription = $request->input('carDescription');
 
         

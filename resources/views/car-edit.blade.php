@@ -209,7 +209,7 @@
                                     <br>
                                     <input style="width: 20%; height: 35px;" type="number" name="carPrice" placeholder="Car Price" min="100000000" step="100000000" oninput="validateCarPrice(this)" required>
                                     <br>
-                                    <label id="text" for="CarYear">Car Year:</label>
+                                    <label id="text" for="carBrand">Brand Car:</label>
                                     <br>
                                     <select style="width:20.5%; height:40px" name="carBrand" id="carBrand">
                                         <option value="Toyota">Toyota</option>
@@ -224,17 +224,14 @@
                                         <option value="Mazda">Mazda</option>
                                     </select>
                                     <br>
-                                    <label  id="text" for="carBrand">Brand Car:</label>
+                                    <label  id="text" for="CarYear">Car Year:</label>
                                     <br>
                                     <select style="width:20.5%; height:40px" name="carYear" id="CarYear">
-                                        <option value="2014">2014</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
                                         <option value="2019">2019</option>
                                         <option value="2020">2020</option>
                                         <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
                                         <!-- Thêm các tùy chọn khác -->
                                     </select>
                                     <br>
