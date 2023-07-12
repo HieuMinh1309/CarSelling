@@ -97,20 +97,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- nút search -->
-                <i class='bx bx-search' id="search-icon"></i>
-                <div class="search-box container">
-                <div ng-app="myApp" ng-controller="namesCtrl">
-                    <p><input type="search" ng-model="test" class="searchh" id="myInput" placeholder="search here..."></p>
-                    </div>
-                </div>
                 <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
                 <a href="/car" class="nav-item nav-link">Cars</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item">Financial Support</a>
+                        <a href="/financial" class="dropdown-item">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
@@ -336,12 +329,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">Financial Support</h3>
-                                    <p class="mb-4">Auto World supports loans for the purpose of buying cars</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Low interest rates</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Simple profile</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Friendly staff</p>
-                                    <a href="financialsupport.html" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3 fontred">Financial Support</h3>
+                                    <p class="mb-4 fontwhite">Auto World supports loans for the purpose of buying cars</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Low interest rates</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Simple profile</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Friendly staff</p>
+                                    <a href="/financial" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -354,12 +347,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">Warranty Policy</h3>
-                                    <p class="mb-4">Auto World has many attractive warranty programs for many different types of vehicles</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Abundant, diverse</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Warranty up to 5 years</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Free consultation</p>
-                                    <a href="warranty.html" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3 fontred">Warranty Policy</h3>
+                                    <p class="mb-4 fontwhite">Auto World has many attractive warranty programs for many different types of vehicles</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Abundant, diverse</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Warranty up to 5 years</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Free consultation</p>
+                                    <a href="/warranty" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -372,12 +365,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">Partner Directory</h3>
-                                    <p class="mb-4">Auto World connects with many businesses across the country</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality partners and enterprises</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Prestige</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                    <a href="partnerdirectory.html" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3 fontred">Partner Directory</h3>
+                                    <p class="mb-4 fontwhite">Auto World connects with many businesses across the country</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Quality partners and enterprises</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Prestige</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    <a href="/partnerdirectory" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -390,12 +383,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">Online Counseling</h3>
-                                    <p class="mb-4">Auto World always supports online consultation for you</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>24/24 Support</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Friendly counselor</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>High level of qualification</p>
-                                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3 fontred">Online Counseling</h3>
+                                    <p class="mb-4 fontwhite">Auto World always supports online consultation for you</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>24/24 Support</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>Friendly counselor</p>
+                                    <p class="fontwhite"><i class="fa fa-check text-success me-3"></i>High level of qualification</p>
+                                    <a href="/contact" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -423,7 +416,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-1.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-1.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -432,14 +425,14 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Tô Minh Hiếu</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-2.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-2.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -448,14 +441,14 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Nguyễn Đỗ Trọng</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-3.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-3.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -464,14 +457,14 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Trần Ngọc Hoàng Pích</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-4.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-4.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -480,7 +473,7 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Quốc Kỳ</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
@@ -500,34 +493,34 @@
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/testimonial-1.jpg') }}" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0" style="color: coral;">Anh Cường (Đen Vâu)</h5>
-                    <p>Social Yanglake</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tôi cảm thấy dịch vụ ở đây vô cùng tuyệt vời, tư vấn nhiệt tình vô cùng, giao diện web bắt mắt, đơn giản, dễ dùng.</p>
+                    <h5 class="mb-0" style="color: coral;">Mr.Cường</h5>
+                    <p class="fontgray">Singer, Producer, Rapper</p>
+                    <div class="testimonial-text bg-light text-center p-4 h170">
+                    <p class="mb-0">I feel that the service here is extremely excellent, the advice is very enthusiastic, the web interface is eye-catching, simple, and easy to use.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/testimonial-2.jpg') }}" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0" style="color: coral;">Anh Độ (Mixi)</h5>
-                    <p>Civic Education Teacher</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tôi là một người có nhu cầu tìm hiểu nhiều loại xe nên trang web này rất thích hợp với những người như tôi, web có nhiều chức năng hay ho, tôi chấm trang web này 10đ.</p>
+                    <h5 class="mb-0" style="color: coral;">Mr.Độ</h5>
+                    <p class="fontgray">Streamer</p>
+                    <div class="testimonial-text bg-light text-center p-4 h170">
+                    <p class="mb-0">I am someone with a need to explore various types of vehicles, so this website is very suitable for people like me. The website has many exciting features that I really like it.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/testimonial-3.jpg') }}" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0" style="color: coral;">Anh Tùng (MTP)</h5>
-                    <p>Singer, Producer, Actor</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Nhờ có trang web này mà mình đã tìm được một chiếc xe phù hợp với nhu cầu của bản thân, các bạn nếu ai muốn tìm cho bản thân một chiếc dream car thì hãy ghé ngay nhé!</p>
+                    <h5 class="mb-0" style="color: coral;">Mr.Tùng</h5>
+                    <p class="fontgray">Singer, Producer, Actor</p>
+                    <div class="testimonial-text bg-light text-center p-4 h170">
+                    <p class="mb-0">Thanks to this website, I was able to find a vehicle that meets my needs. If any of you are looking for a car that suits your preferences, I highly recommend visiting this website right away!</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/testimonial-4.jpg') }}" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0" style="color: coral;">Chị Bích Phương</h5>
-                    <p>Singer</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Trang web này giao diện không quá bắt mắt nhưng cũng vừa mắt mình, tính năng đơn giản dễ sử dụng, đội ngũ hỗ trợ rất nhiệt tình mình rất thích cách tư vấn của các bạn supporters.</p>
+                    <h5 class="mb-0" style="color: coral;">Mrs.Bích Phương</h5>
+                    <p class="fontgray">Singer</p>
+                    <div class="testimonial-text bg-light text-center p-4 h170">
+                    <p class="mb-0">This website may not have a flashy interface, but it's visually appealing enough for me. The features are simple and easy to use, and the support team is very enthusiastic. I really like the way the support staff provides guidance and assistance</p>
                     </div>
                 </div>
             </div>

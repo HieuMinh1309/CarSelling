@@ -91,7 +91,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item active">Financial Support</a>
+                        <a href="/financial" class="dropdown-item active">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
@@ -141,6 +141,8 @@
     .box h3 {
     grid-column: 2;
     margin-bottom: 0px; /* Khoảng cách dưới tiêu đề */
+    margin-bottom: -8px;
+    
     }
 
     .box p {
@@ -157,13 +159,7 @@
 
 </style>
     <!-- blog section -->
-        <section class="blog" id="blog">
-                <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5 v1">
-                    <h2 class="m-0" style="color:#a80000"></i> AutoWorld</h2>
-                </a>
-                <p class="fontt">Auto World is one of the reputable and quality car information <br>
-                     and car buying and selling sites in Vietnam</p>
-        </section>
+        
         <section class="blog" id="news" style="margin-top: 50px;margin-left: 230px;">
             <!-- blog container -->
             <div class="blog-container container" id="blog-container">

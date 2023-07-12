@@ -13,6 +13,19 @@ class ContactCRUDController extends Controller
         return view('contactAdmin.index', ['contacts' => $contacts]);
     }
 
+
+    public function show()
+    {
+        $contacts = ContactCRUD::all();
+        return view('homepage.contact', ['contacts' => $contacts]);
+    }
+
+    public function store1(Request $request)
+    {
+        $contact = ContactCRUD::create($request->all());
+        return redirect('/contact')->with('success', 'Contact created successfully.');
+    }
+
     public function create()
     {
         return view('contactAdmin.create');
@@ -37,10 +50,10 @@ class ContactCRUDController extends Controller
     {
         $contact = ContactCRUD::find($id);
         if (!$contact) {
-            return redirect('contactAdmin.index')->with('error', 'Contact not found.');
+            return redirect()->route('contactAdmin.index')->with('error', 'Contact not found.');
         }
         $contact->update($request->all());
-        return redirect('admin/contact')->with('success', 'Contact updated successfully.');
+        return redirect()->route('contact.index')->with('success', 'Contact updated successfully.');
     }
 
     public function destroy($id)

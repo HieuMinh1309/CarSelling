@@ -15,7 +15,7 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Compare CSS -->
-    <link href="{{asset('css/compare.css') }}" rel="stylesheet">
+    <link href="{{asset('css/comparecar.css') }}" rel="stylesheet">
 
     <!-- thư viện search icon -->
     <link href="../img/favicon.ico" rel="icon">
@@ -115,7 +115,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item">Financial Support</a>
+                        <a href="/financial" class="dropdown-item">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
@@ -150,15 +150,14 @@
                         <table class="table table-striped">
                         <table cellpadding="0" cellspacing="0" class=" tbl-ger tbl-compare-form">
                             <tbody>
-                                <form action="" method="post">
-                                    <table>
+                                    <table class="table1">
                                         <!-- CHỌN HÃNG XE -->
                                         <tr>
                                             <td rowspan="3" width="25%" style="text-transform: uppercase;">
                                                 <h4 class="table-title">Comparations</h4>
-                                              </td>
-                                              <td style="width:317px;">
-                                                <select class="form-sosanh" id="brandname1" onchange="filterCarNames(1)">
+                         a                    </td>
+                                              <td style="width:317px; padding-left: 80px;" class="first">
+                                                <select class="form-sosanh" id="brandname1" onchange="filterCarNames(1)" style="width: 150px;">
                                                   <option>Choose a Brand</option>
                                                   @php
                                                   $uniqueBrands = [];
@@ -173,8 +172,8 @@
                                                   @endforeach
                                                 </select>
                                               </td>
-                                              <td style="width:317px;">
-                                                <select class="form-sosanh" id="brandname2" onchange="filterCarNames(2)">
+                                              <td style="width:317px; padding-left: 80px;">
+                                                <select class="form-sosanh" id="brandname2" onchange="filterCarNames(2)" style="width: 150px;">
                                                   <option>Choose a Brand</option>
                                                   @php
                                                   $uniqueBrands = [];
@@ -189,8 +188,8 @@
                                                   @endforeach
                                                 </select>
                                               </td>
-                                              <td style="width:317px;">
-                                                <select class="form-sosanh" id="brandname3" onchange="filterCarNames(3)">
+                                              <td style="width:317px; padding-left: 80px;">
+                                                <select class="form-sosanh" id="brandname3" onchange="filterCarNames(3)" style="width: 150px;">
                                                   <option>Choose a Brand</option>
                                                   @php
                                                   $uniqueBrands = [];
@@ -209,27 +208,23 @@
                                         </tr>
                                         <!-- Chọn loại xe -->
                                         <tr>
-                                            <td style="width:317px;">
-                                                <select class="form-sosanh" id="carname1" onchange="displayCarDetails(1)">
+                                            <td style="width:317px; padding-left: 80px;" class="first">
+                                                <select class="form-sosanh" id="carname1" onchange="displayCarDetails(1)" style="width: 150px;">
                                                     <option>Choose Car Name</option>
                                                 </select>
                                             </td>
-                                            <td style="width:317px;">
-                                                <select class="form-sosanh" id="carname2" onchange="displayCarDetails(2)">
+                                            <td style="width:317px; padding-left: 80px;">
+                                                <select class="form-sosanh" id="carname2" onchange="displayCarDetails(2)" style="width: 150px;">
                                                     <option>Choose Car Name</option>
                                                 </select>
                                             </td>
-                                            <td style="width:317px;">
-                                                <select class="form-sosanh" id="carname3" onchange="displayCarDetails(3)">
+                                            <td style="width:317px; padding-left: 80px;">
+                                                <select class="form-sosanh" id="carname3" onchange="displayCarDetails(3)" style="width: 150px;">
                                                     <option>Choose Car Name</option>
                                                 </select>
                                             </td>
                                         </tr>
                                     </table>
-                                </form>
-                                
-                              
-                                
                             </tbody>
                         </table>
                     </table>
@@ -237,15 +232,10 @@
                     </div>
                     <div class="home-box-main-full have-tab">
                         <div class="box-title">
-                            <ul class="seven_tabs" style="list-style-type: none;">
-                                <li>
-                                    <h2 class="sevenMainTitle white-color">
-                                        <a href="#tab-car-2">Fundamental Information</a>
-                                    </h2>
-                                </li>
-                            </ul>
+                             <h2 class="font">Fundamental Information</h2>
                         </div>
-                        <div class="box-content seven_tab_content mt10" id="tab-car-2" style="display: block;">
+                        
+                        <div class="box-content seven_tab_content mt50" id="tab-car-2" style="display: block;">
                             <table class="" width="100%" cellspacing="0">
                                 <tbody>
                                     <tr>

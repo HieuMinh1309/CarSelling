@@ -91,7 +91,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item active">Financial Support</a>
+                        <a href="/financial" class="dropdown-item active">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
@@ -134,8 +134,8 @@
     text-align: center;
     }
     img{
-        width:250px;
-        height:250px;
+        width:70%;
+        height:auto;
     }
     .box {
     display: grid;
@@ -144,23 +144,26 @@
     align-items: start;
     }
 
-    .box img {
-    grid-row: 1 / span 2;
-    }
-
     .box h3 {
     grid-column: 2;
-    margin-bottom: 0px; /* Khoảng cách dưới tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+    color: #a80000;
+    font-size: 40px;
     }
 
     .box p {
     grid-column: 2;
     margin-top: 0px; /* Khoảng cách trên nội dung */
+    color: white;
+    font-size: 25px;
     }
 
     .box a.blog-btn {
     grid-column: 2;
     margin-top: 10px;
+    }
+    .box a{
+        padding-bottom: 50px;
     }
 
 
@@ -174,9 +177,9 @@
                 <p class="fontt">Auto World is one of the reputable and quality car information <br>
                      and car buying and selling sites in Vietnam</p>
         </section>
-        <section class="blog" id="news" style="margin-top: 50px;margin-left: 230px;">
+        <section class="blog" id="news" style="margin-top: 50px; margin-left: 230px;">
             <!-- blog container -->
-            <div class="blog-container container" id="blog-container">
+            <div class="blog-container" id="blog-container" style="margin-left: 15%;">
                 @foreach ($blogs as $blog)
                 <div class="box">
                     <img src="../uploadBlog/{{$blog->imageBlog}}">

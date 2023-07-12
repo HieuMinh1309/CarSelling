@@ -2,15 +2,20 @@
 <html lang="en">
 
 <head>
+    <title>Car List</title>
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <!-- Thư viện pagination.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+
+    <!-- Thư viện jQuery -->
 
     <!-- thư viện search icon -->
     <link href="../../img/favicon.ico" rel="icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/phantrang.css') }}" rel="stylesheet">
     <link href="{{ asset('js/jquery-3.6.3.min.js') }}" rel="stylesheet">
 
     <!-- Google Web Fonts -->
@@ -33,7 +38,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- cars css -->
-    <link href="{{ asset('css/cars.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/Cars.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
     <!-- Template Stylesheet -->
@@ -57,24 +62,24 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>36/5 D5.Bình Thạnh.TPHCM</small>
+                    <small class="fa fa-map-marker-alt text-primaddress-showroom ary me-2"></small>
+                    <small>35/6 D5 street, Binh Thanh district</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>24/7 Operation</small>
+                    <small class="far fa-clock text-primaddress-showroom ary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 12.00 PM</small>
                 </div>
             </div>
-                <div class="col-lg-5 px-5 text-end">
+            <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+84338165083</small>
+                    <small class="fa fa-phone-alt text-primaddress-showroom ary me-2"></small>
+                    <small>+84 778067776</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100024459408325"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/nguyendo.t/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -83,33 +88,30 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light shadow sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="{{ asset('img/W-removebg-preview.png') }}" alt="" style="height:250px; margin-top: 20px; width: 70%;">
+           <img src="{{ asset('img/W-removebg-preview.png') }}" alt="" style="height:250px; margin-top: 20px; width: 70%;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- nút search -->
-                <i class='bx bx-search' id="search-icon"></i>
-                </div>
-                <a href="../index.html" class="nav-item nav-link">Home</a>
-                <a href="../about.html" class="nav-item nav-link">About</a>
-                <a href="" class="nav-item nav-link active">Cars</a>
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/car" class="nav-item nav-link active">Cars</a>
                 <div class="nav-item dropdown">
-                    <a href="../service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="../financialsupport.html" class="dropdown-item active">Financial Support</a>
-                        <a href="../warranty.html" class="dropdown-item">Warranty Policy</a>
-                        <a href="../partnerdirectory.html" class="dropdown-item">Partner Directory</a>
+                        <a href="/financial" class="dropdown-item">Financial Support</a>
+                        <a href="/warranty" class="dropdown-item">Warranty Policy</a>
+                        <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
                 </div>
-                <a href="../blog.html" class="nav-item nav-link">Blog</a>
-                <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                <a href="/blog" class="nav-item nav-link">Blog </a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Compare<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="/compare" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Compare<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -121,16 +123,7 @@
             <div class="container text-center">
                 <br>
                 <h1 class="display-3 text-white mb-3 animated slideInDown">Cars</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center text-uppercase">
-                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="../about.html">About</a></li>
-                        <li class="breadcrumb-item text-danger active" aria-current="page">Cars</li>
-                        <li class="breadcrumb-item"><a href="../financialsupport.html">Services</a></li>
-                        <li class="breadcrumb-item"><a href="../blog.html">Blog</a></li>
-                        <li class="breadcrumb-item"><a href="../contact.html">Contact</a></li>
-                    </ol>
-                </nav>
+                
             </div>
         </div>
     </div>
@@ -140,110 +133,48 @@
     <section class="parts card-content" id="parts" >    
         <div class="heading">
             <span class="carsfont fontt">All Cars</span>
-            <h2 class="carsh2 fontt">Information about vehicles</h2>
+            <h2 class="carsh2 fontt">Information About Vehicles</h2>
         </div>
+
         <!-- parts container -->
-        <div class="row">
-            <div class="col-md-2">
-                <h3 class="fontt">Car Filter</h3>
-                <hr>
-                <div id="filter">
-                    <h5 class="fontt">Brand Car</h5>
-                    <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Honda
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>BMW
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Toyota
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Nissan
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Audi
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Mazda
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Suzuki
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Porche
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Hyundai
-                      </label>
-                      <label id="container">
-                        <input type="checkbox">
-                        <div class="checkmark"></div>Ford
-                      </label>
-                </div>
-                <hr>
-                <div class="filter">
-                    <h5 class="fontt">Year Of Production</h5>
-                    <div id="box">
-                        <select>
-                          <option>2014-2015</option>
-                          <option>2016-2017</option>
-                          <option>2018-2019</option>
-                          <option>2020-2021</option>
-                          <option>2022-2023</option>
-                        </select>
-                      </div>
-                </div>
-                <hr>
-                <div class="filter">
-                    <h5 class="fontt">Car Price</h5>
-                    <div id="boxin">
-                        <select>
-                          <option>500.000-1.000.000 VND</option>
-                          <option>1.500.000-2.000.000 VND</option>
-                          <option>2.500.000-3.000.000 VND</option>
-                          <option>3.500.000-4.000.000 VND</option>
-                          <option>4.500.000-5.000.000 VND</option>
-                        </select>
-                      </div>
-                </div>
-            </div>
-            <div class="col-md-10">
-                <div class="card" id="carList">
-                    <div class="parts-container">
-                        <div class="row" id="myDIV">
-                            @foreach ($carlist as $car)
-                            <div class="box col-md-3">
-                                <img id="heght" src="../upload/{{$car->carImage }}" alt="">
-                                <h3><a href="car1.html">{{ $car->carName }}</a></h3>
-                                <i class='bx bxs-star'>{{ $car->carPrice }}</i>
-                                <a href="{{ route('autoworld_CRUDs.show', ['id' => $car->id]) }}" class="view">
-                                    <div class="default-btn">
-                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
-                                      <span>View</span>
-                                    </div>
-                                    <div class="hover-btn">
-                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
-                                      <span>View Car</span>
-                                    </div>
-                                    </a>
-                                    </div>
-                            @endforeach      
+     <div class="row">
+    <div class="card" id="carList">
+        <div class="parts-container">
+            <div class="row" id="myDIV">
+                @foreach ($carlist as $car)
+                <div class="box col-md-3">
+                    <div class="car-item">
+                        <div class="car-img">
+                            <img src="../upload/{{$car->carImage }}" alt="">
                         </div>
-                    </div>    
+
+                        <div class="titlebox">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            <span class="titlebox">{{ $car->carBrand }}</span>
+                        </div>
+
+                        <div class="contentbox">
+                            <p class="content">{{ $car->carName }}</p>
+                        </div>
+
+                        <div class="contentbox">
+                            <p class="price">{{ $car->carPrice }} VNĐ</p>
+                        </div>
+
+                        <div class="buttonbox">
+                            <a class="button" href="{{ route('autoworld_CRUDs.show', ['id' => $car->id]) }}" target="_blank">Car Detail</a>
+                        </div>
+                    </div>
                 </div>
+                @endforeach
             </div>
-        </div>    
-    </section>
+        </div>
+    </div>
+</div>
+</section>
+
+    <br>
+    <div id="pagination-container"></div>
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -303,6 +234,58 @@
         </div>
     </div>
 <!-- Footer End -->
+<script>
+$(document).ready(function() {
+  // Đặt số lượng mục trên mỗi trang
+  var itemsPerPage = 4;
+
+  // Tính số trang dựa trên số lượng xe và số lượng mục trên mỗi trang
+  var totalPages = Math.ceil({{ $carlist->count() }} / itemsPerPage);
+
+  // Thiết lập tùy chọn phân trang
+  var options = {
+    dataSource: Array.from({{ $carlist->count() }}, (x, index) => index + 1), // Mảng dữ liệu để phân trang
+    pageSize: itemsPerPage, // Số lượng mục trên mỗi trang
+    showGoInput: true, // Hiển thị trường nhập trang
+    showGoButton: true, // Hiển thị nút đi tới trang
+    callback: function(data, pagination) {
+      // Đổ dữ liệu xe tương ứng vào giao diện
+      var html = '';
+      for (var i = 0; i < data.length; i++) {
+        var car = data[i];
+        html += `
+          <div class="box col-md-3">
+            <div class="car-item">
+              <div class="car-img">
+                <img src="../upload/${car.carImage}" alt="">
+              </div>
+              <div class="titlebox">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <span class="titlebox">${car.carBrand}</span>
+              </div>
+              <div class="contentbox">
+                <p class="content">${car.carName}</p>
+              </div>
+              <div class="contentbox">
+                <p class="price">${car.carPrice} VNĐ</span></p>
+              </div>
+              <div class="buttonbox">
+                <a class="button" href="{{ route('autoworld_CRUDs.show', ['id' => $car->id]) }}" target="_blank">Car Detail</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Đưa dữ liệu vào phần tử có id "myDIV"
+      $('#myDIV').html(html);
+    }
+  };
+
+  // Khởi tạo phân trang
+  $('#pagination-container').pagination(options);
+});
+</script>
 
 
     <!-- Back to Top -->

@@ -1,0 +1,109 @@
+.wrap-main-page{
+    padding-bottom: 0;
+    margin-top: 10px;
+    position: relative;
+}
+
+.pb15{
+    padding-bottom: 15px;
+}
+
+.mb5{
+    margin-bottom: 5px;
+}
+
+.mt50{
+    margin-top: 50px;
+}
+
+.box-content table{
+    width: 100%;
+    border: 1px solid white;
+}
+
+.tbl-ger td, .tbl-ger th, .tbl-tn td.par{
+    border: #ddd 1px solid;
+    padding: 5px 10px;
+    color: white;
+}
+
+.tbl-compare-form td, .tbl-body-compare td, .tbl-body-compare th{
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.form-sosanh{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.table-title{
+    color: white;
+    padding-left: 20px;
+}
+
+.box-title{
+    padding-top: 10px;
+    position: relative;
+    max-height: 35px;
+}
+
+.box-title ul{
+    margin-left: -10px;
+    list-style: none;
+}
+
+.have-tab .box-title ul li{
+    float: left;
+}
+
+.box-title ul li{
+    padding: 6px 10px;
+    position: relative;
+}
+
+.white-color{
+    color: #fff !important;
+}
+
+.box-title .font{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: darkturquoise !important;
+    padding-top: 35px;
+}
+
+.othongso{
+    padding: -1px -2px -1px -1px;
+}
+
+.tbl-body-compare th, .tbl-body-compare td.alleft{
+    text-align: left;
+    padding-left: 23px;
+    font-weight: bold;
+}
+
+.table1 .first{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table1 td{
+    border: 1px solid white;
+}
+
+.box-content img{
+    width: 200px;
+    height: 120px;
+}

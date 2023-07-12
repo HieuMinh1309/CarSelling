@@ -163,12 +163,28 @@
                         <div class="noidung">
                             <form class="m-4" style="width: 30%;">
                                 <div class="form-group">
-                                    <label>Brand</label>
-                                    <select class="form-control" name="hang-xe" id="hang-xe"></select>
+                                <label style="margin-left: 140px;">Brands</label>
+                                    <br>
+                                <select class="form-sosanh" id="brandname1" onchange="filterCarNames(1)" style="width: 200px; margin-left: 80px;">
+                                                  <option>Choose a Brand</option>
+                                                  @php
+                                                  $uniqueBrands = [];
+                                                  @endphp
+                                                  @foreach($compareCars as $compareCar)
+                                                    @if(!in_array($compareCar->brands, $uniqueBrands))
+                                                      @php
+                                                      $uniqueBrands[] = $compareCar->brands;
+                                                      @endphp
+                                                      <option>{{ $compareCar->brands }}</option>
+                                                    @endif
+                                                  @endforeach
+                                                </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Name</label>
-                                    <select class="form-control" name="ten-xe" id="ten-xe"></select>
+                                <label style="margin-left: 140px;">Names</label>
+                                <select class="form-sosanh" id="carname1" onchange="displayCarDetails(1)" style="width: 200px; margin-left: 80px;">
+                                    <option>Choose Car Name</option>
+                                </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Price Of The Car</label>
@@ -176,7 +192,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Percent</label>
-                                    <select class="form-control-1" name="so-tien-vay" id="so-tien-vay">
+                                    <select class="form-control-1" name="so-tien-vay" id="so-tien-vay"  onchange="tienvayduoc()" >
+                                        <option>Select Loan Percentage</option>
                                         <option value="60">60%</option>
                                         <option value="50">50%</option>
                                         <option value="40">40%</option>
@@ -200,6 +217,15 @@
                                         <option value="1">1 Year</option>
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                        <label>Lãi suất/năm</label>
+                                        <select class="form-control-1" name="lai-suat">
+                                          <option value="7.5">7.5%</option>
+                                          <option value="7.7">7.7%</option>
+                                          <option value="7.5">7.5%</option>
+                                          <option value="8.9">8.9%</option>
+                                        </select>
+                                      </div>
                             </form>
 
                             <div class="m-5">
@@ -209,7 +235,7 @@
                                     <p>Annual payment amount: <span id="totalmoneytopay" style="color: red;">0</span> VND</p>
                                 </div>
                                 <div class="button-center">
-                                        <input type="button" value="Calculate" onclick="calculateLoan()">
+                                        <input type="button" value="Calculate" onclick="tinhtien()">
                                 </div>
                             </div>
                         </div>
@@ -254,100 +280,138 @@
             
 
     <!-- tính lãi suất -->
+
     <script>
-        // Hàm để ngăn cách đơn vị tiền
+var compareCars = <?php echo json_encode($compareCars); ?>;
+var filteredCars1 = [];
+var filteredCars2 = [];
+var filteredCars3 = [];
+
+function filterCarNames(selectNumber) {
+    var brandSelect = document.getElementById('brandname' + selectNumber);
+    var carSelect = document.getElementById('carname' + selectNumber);
+
+    if (!brandSelect || !carSelect) {
+        console.error('Missing brandSelect or carSelect element');
+        return;
+    }
+
+    var selectedBrand = brandSelect.value;
+
+    switch (selectNumber) {
+        case 1:
+            filteredCars1 = compareCars.filter(function (car) {
+                return car.brands === selectedBrand;
+            });
+            updateCarSelect(carSelect, filteredCars1);
+            break;
+        case 2:
+            filteredCars2 = compareCars.filter(function (car) {
+                return car.brands === selectedBrand;
+            });
+            updateCarSelect(carSelect, filteredCars2);
+            break;
+        case 3:
+            filteredCars3 = compareCars.filter(function (car) {
+                return car.brands === selectedBrand;
+            });
+            updateCarSelect(carSelect, filteredCars3);
+            break;
+        default:
+            console.error('Invalid selectNumber');
+            break;
+    }
+}
+
+function updateCarSelect(carSelect, filteredCars) {
+    carSelect.innerHTML = '<option>Choose Car Name</option>';
+
+    filteredCars.forEach(function (car) {
+        var option = document.createElement('option');
+        option.text = car.carName;
+        carSelect.add(option);
+    });
+}
+
+function displayCarDetails(selectNumber) {
+    var carSelect = document.getElementById('carname' + selectNumber);
+    var giaXeInput = document.getElementById('gia-xe');
+
+    if (!carSelect || !giaXeInput) {
+        console.error('Missing carSelect or giaXeInput element');
+        return;
+    }
+
+    var selectedCarName = carSelect.value;
+    var selectedCar;
+
+    switch (selectNumber) {
+        case 1:
+            selectedCar = filteredCars1.find(function (car) {
+                return car.carName === selectedCarName;
+            });
+            break;
+        case 2:
+            selectedCar = filteredCars2.find(function (car) {
+                return car.carName === selectedCarName;
+            });
+            break;
+        case 3:
+            selectedCar = filteredCars3.find(function (car) {
+                return car.carName === selectedCarName;
+            });
+            break;
+        default:
+            console.error('Invalid selectNumber');
+            break;
+    }
+
+    if (selectedCar) {
+        giaXeInput.value = selectedCar.price;
+    } else {
+        giaXeInput.value = '';
+    }
+}
+</script>
+
+<script>
+        // hàm để ngăn cách đơn vị tiền
         function formatCurrencyVND(value) {
-            let format = value.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+            let format = value.toLocaleString('it-IT', {style: 'currency', currency: 'VND'});
             format = format.split('');
             format.splice(-3);
             return format.join('');
         }
-    
-        function tienvayduoc() {
-            let vaytoida = parseInt(document.getElementById('so-tien-vay').value || 0) / 100;
+
+        function tienvayduoc(){
+            let vaytoida = ($('select[name=so-tien-vay]').val() || 0) / 100;
             let tienxe = parseInt(document.getElementById('gia-xe').value || 0);
             let ketqua = formatCurrencyVND(parseInt(vaytoida * tienxe));
-            document.getElementById('tongtienvay').value = ketqua;
-        }
-    
-        function tinhtien() {
-            let vaytoida = parseInt(document.getElementById('so-tien-vay').value || 0) / 100;
-            let tienxe = parseInt(document.getElementById('gia-xe').value || 0);
-            let thoigianvay = parseInt(document.getElementById('thoi-gian-tra').value || 0);
-            let laisuat = parseInt(document.getElementById('lai-suat').value || 0) / 100;
-            let totalloan = vaytoida * tienxe;
-            let principal = formatCurrencyVND(parseFloat(totalloan / thoigianvay));
-            let profit = formatCurrencyVND(parseFloat(totalloan * laisuat / thoigianvay));
-            let tiengoc = parseFloat(totalloan / thoigianvay);
-            let tienlai = parseFloat(totalloan * laisuat / thoigianvay);
-            let tongtien = formatCurrencyVND(parseFloat(tiengoc + tienlai));
-    
-            document.getElementById('totalloan').innerHTML = principal;
-            document.getElementById('totalprofit').innerHTML = profit;
-            document.getElementById('totalmoneytopay').innerHTML = tongtien;
+            $('input[name=tien-vay-no]').val(ketqua);
         }
 
+        function tinhtien(){
+            let vaytoida = ($('select[name=so-tien-vay]').val() || 0) / 100;
+            let tienxe = parseInt(document.getElementById('gia-xe').value || 0);
+            let thoigianvay = ($('select[name=thoi-gian-tra]').val() || 0);
+            let laisuat = ($('select[name=lai-suat]').val() || 0) / 100;
+            let totalloan = (vaytoida * tienxe);
+            let principal = formatCurrencyVND(parseFloat(totalloan/thoigianvay));
+            let profit= formatCurrencyVND((parseFloat(totalloan*laisuat)/thoigianvay));
+            let tiengoc= parseFloat(totalloan/thoigianvay);
+            let tienlai= parseFloat((totalloan*laisuat)/thoigianvay);
+            let tongtien = formatCurrencyVND(parseFloat(tiengoc + tienlai))
+
+            document.getElementById('totalloan').innerHTML= principal;
+            document.getElementById('totalprofit').innerHTML= profit;
+            document.getElementById('totalmoneytopay').innerHTML= tongtien;
+        }
     // information
         function check(){
             location.reload('');
             alert('Thank You For Letting Us Know Your Opinions');
         }
     </script>
-
-    <script>
-        fetch('/api/cars')
-            .then(response => response.json())
-            .then(data => {
-                const brandSelect = document.getElementById('hang-xe');
-                const nameSelect = document.getElementById('ten-xe');
-                const priceInput = document.getElementById('gia-xe');
-                const brandList = [];
-
-                data.forEach(car => {
-                    const brand = car.carBrand;
-                    if (!brandList.includes(brand)) {
-                            brandList.push(brand);
-                            const brandOption = document.createElement('option');
-                            brandOption.textContent = brand;
-                            brandSelect.appendChild(brandOption);
-                        }
-                    });
-
-                    brandSelect.addEventListener('change', populateCarNames);
-
-                    function populateCarNames() {
-                        const selectedBrand = brandSelect.value;
-                        nameSelect.innerHTML = '';
-                        priceInput.value = '';
-
-                        const filteredCars = data.filter(car => car.carBrand === selectedBrand);
-
-                        filteredCars.forEach(car => {
-                            const nameOption = document.createElement('option');
-                            nameOption.textContent = car.carName;
-                            nameSelect.appendChild(nameOption);
-                        });
-                    }
-
-                    nameSelect.addEventListener('change', populateCarPrice);
-
-                    function populateCarPrice() {
-                        const selectedBrand = brandSelect.value;
-                        const selectedCarName = nameSelect.value;
-
-                        const selectedCar = data.find(car => car.carBrand === selectedBrand && car.carName === selectedCarName);
-
-                        if (selectedCar) {
-                            priceInput.value = selectedCar.carPrice;
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        </script>
-
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">

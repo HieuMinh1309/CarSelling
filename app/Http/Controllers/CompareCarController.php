@@ -12,6 +12,11 @@ class CompareCarController extends Controller
         $compareCars = CompareCar::all();
         return view('compare_cars.index', compact('compareCars'));
     }
+    public function showFin()
+    {
+        $compareCars = CompareCar::all();
+        return view('homepage.fin', compact('compareCars'));
+    }
     public function create()
     {
         return view('compare_cars.create');

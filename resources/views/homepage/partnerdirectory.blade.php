@@ -93,7 +93,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item">Financial Support</a>
+                        <a href="/financial" class="dropdown-item">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item active">Partner Directory</a>
                     </div>

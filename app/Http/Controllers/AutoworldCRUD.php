@@ -13,7 +13,6 @@ class AutoworldCRUD extends Controller
     public function show($id)
     {
         $car = DB::table('autoworld_CRUDs')->where('id', $id)->first();
-    
         return view('homepage.view', compact('car'));
     }
         

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Blog</title>
+    <title>Create Contact</title>
     @vite('resources/js/app.js')
     @vite('resources/js/nav.js')
     @vite('resources/js/Admincontact.js')
@@ -69,6 +69,8 @@
 		<a href="/admin/compare"class="icon-a"><i class="fa-solid fa-arrows-turn-to-dots"></i> &nbsp;&nbsp;Compare</a>
 		<a href="/admin/upload"class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Logos</a>
         <a id="point" href="/admin/blog"class="icon-a"><i class="fa fa-book-open"></i> &nbsp;&nbsp;Add Blogs</a>
+
+		
 	</div>
     <div id="main">
 
@@ -127,7 +129,7 @@
                 document.getElementById('imageBlog').value = filename;
         
                 // Update label text with selected file name
-                var label = document.querySelector('.custom-file-label');
+var label = document.querySelector('.custom-file-label');
                 label.textContent = filename;
             });
         </script>

@@ -32,6 +32,9 @@ Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 Route::get('/car', [HomepageController::class, 'car']);
 Route::get('/compare', [HomepageController::class, 'compare']);
 
+Route::get('/contact', [ContactCRUDController::class, 'show'])->name('contact.hompage');
+Route::post('/contact', [ContactCRUDController::class, 'store1'])->name('contact.hompage');
+
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -43,9 +46,9 @@ Route::get('/contact', function () {
     return view('homepage.contact');
 });
 
-Route::get('/financialsupport', function () {
-    return view('homepage.fin');
-});
+// Route::get('/financialsupport', function () {
+//     return view('homepage.fin');
+// });
 
 Route::get('/warranty', function () {
     return view('homepage.warranty');
@@ -86,7 +89,7 @@ Route::post('/car', [AutoworldCRUD::class, 'store'])->name('car.store');
 
 
 Route::get('/car/{id}/edit', [AutoworldCRUD::class, 'edit'])->name('car.edit');
-Route::post('/car/{id}', [AutoworldCRUD::class, 'update'])->name('car.update');
+Route::put('/car/{id}', [AutoworldCRUD::class, 'update'])->name('car.update');
 // routes/web.php
 Route::get('/car/{id}', [AutoworldCRUD::class, 'show'])->name('car.show');
 Route::delete('/car/{id}', [AutoworldCRUD::class, 'destroy'])->name('car.delete');
@@ -114,7 +117,7 @@ Route::delete('/admin/contact/{id}', [ContactCRUDController::class, 'destroy'])-
 Route::get('/finance', [CompareCarController::class, 'show'])->name('compare_cars.show');
 
 //compare
-
+Route::get('/financial', [CompareCarController::class, 'showFin'])->name('compare_cars.showFin');
 Route::get('/admin/compare', [CompareCarController::class, 'index'])->name('compare_cars.index');
 Route::get('/admin/compare/create', [CompareCarController::class, 'create'])->name('compare_cars.create');
 Route::post('/admin/compare', [CompareCarController::class, 'store'])->name('compare_cars.store');

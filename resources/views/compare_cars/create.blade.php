@@ -113,6 +113,7 @@
                     <option value="Yellow">Yellow</option>
                     <option value="Red">Red</option>
                     <option value="Brown">Brown</option>
+                    <option value="Grey">Grey</option>
                 </select>                
                 
                 <br>
@@ -133,8 +134,9 @@
                 <label id="text" for="engine_type">Engine Type:</label>
                 <br>
                 <select name="engine_type" id="engine_type">
-                    <option value="Turbocharged Engine">Turbocharged Engine</option>
-                    <option value="Twin-Turbocharged Engine">Twin-Turbocharged Engine</option>
+                    <option value="Hybrid Engine">Hybrid Engine</option>
+                    <option value="Internal Combustion Engine">Internal Combustion Engine</option>
+                    <option value="Full Electric Engine">Full Electric Engine</option>
                 </select>
                 <br>
                 <label id="text" for="fuel">Fuel:</label>
@@ -142,19 +144,17 @@
                 <select name="fuel" id="fuel">
                     <option value="Gasoline">Gasoline</option>
                     <option value="Oil">Oil</option>
+                    <option value="Electricity">Electricity</option>
                 </select>
                 <br>
                 <label id="text" for="year_of_manufacture">Year</label>
                 <br>
                 <select name="year_of_manufacture" id="year_of_manufacture">
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
                 </select>
                 <label id="text" for="origin">Origin:</label>
                 <br>
@@ -176,6 +176,7 @@
                 <label id="text" for="seating_capacity">Seating Capacity:</label>
                 <br>
                 <select name="seating_capacity" id="seating_capacity" required>
+                    <option value="4">4</option>
                     <option value="5">5</option>
                     <option value="7">7</option>
                 </select>     
@@ -183,8 +184,8 @@
                 <label id="text" for="number_of_doors">Number of Doors:</label>
                 <br>
                 <select name="number_of_doors" id="number_of_doors" required>
-                    <option value="5">2</option>
-                    <option value="7">4</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
                 </select>  
                 <br>              
                 <label id="text" for="origin">Price:</label>

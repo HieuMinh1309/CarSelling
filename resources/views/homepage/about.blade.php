@@ -90,7 +90,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item">Financial Support</a>
+                        <a href="/financial" class="dropdown-item">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="d-flex py-5 px-4">
                         <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i>
                         <div class="ps-4">
-                            <h5 class="mb-3 text-secondary">Quality Servicing</h5>
+                            <h5 class="mb-3 fontred">Quality Servicing</h5>
                             <p class="text-white">Quality and reputation always come first.</p>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                     <div class="d-flex dark py-5 px-4">
                         <i class="fa fa-users-cog fa-3x text-primary flex-shrink-0"></i>
                         <div class="ps-4">
-                            <h5 class="mb-3">Expert Workers</h5>
+                            <h5 class="mb-3 fontred">Expert Workers</h5>
                             <p class="text-white">We'll always improve ourselves to bring the best services to customers.</p>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                     <div class="d-flex py-5 px-4">
                         <i class="fa fa-check fa-3x text-primary flex-shrink-0"></i>
                         <div class="ps-4">
-                            <h5 class="mb-3">Qualified Information</h5>
+                            <h5 class="mb-3 fontred">Qualified Information</h5>
                             <p class="text-white">Our pages will always bring you the most accurate cars news</p>
                         </div>
                     </div>
@@ -260,7 +260,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-1.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-1.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -269,14 +269,14 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Tô Minh Hiếu</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-2.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-2.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -285,14 +285,14 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Nguyễn Đỗ Trọng</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-3.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-3.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -301,14 +301,14 @@
                         </div>
                         <div class="bg-light text-center p-4">
                             <h5 class="fw-bold mb-0">Trần Ngọc Hoàng Pích</h5>
-                            <small>Designation</small>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('img/team-4.jpg') }}" alt="">
+                            <img class="img-fluid imgsize" src="{{ asset('img/team-4.jpg') }}" alt="">
                             <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -316,8 +316,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Quốc Kỳ</h5>
+                            <small>Designer</small>
                         </div>
                     </div>
                 </div>

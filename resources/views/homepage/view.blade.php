@@ -10,6 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
     <link href="{{ asset('js/jquery-3.6.3.min.js') }}" rel="stylesheet">
+    <link href="{{ asset('css/cardetail.css') }}" rel="stylesheet">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,7 +147,6 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <!-- nút search -->
                 <div class="container-input">
-                    <input onkeyup="searchTable()" type="text" placeholder="Search" id="searchInput" name="text" class="input">
                     <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
                       <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
                   </svg>
@@ -158,7 +158,7 @@
                 <div class="nav-item dropdown">
                     <a href="/service" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="/financialsupport" class="dropdown-item active">Financial Support</a>
+                        <a href="/financial" class="dropdown-item active">Financial Support</a>
                         <a href="/warranty" class="dropdown-item">Warranty Policy</a>
                         <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
@@ -201,11 +201,16 @@
         <div class="card" id="carList">
             <div class="parts-container container" >
                 <div class="row" id="myDIV">
-                    <div class="box col-md-3">
-                        <img id="heght" src="../upload/{{$car->carImage }}" alt="">
-                        <h3><a href="#">{{ $car->carName }}</a></h3>
-                        <i class='bx bxs-star'>{{ $car->carPrice }}VND</i>
-                    </div>   
+                      <div class="carcontainer">
+                            <div class="imgbox">
+                                <div class="mainpic">
+                                @php
+                                $carImage = str_replace('D:\\xampp\\tmp\\', '', $car->carImage);
+                                @endphp
+                                <img src="{{ asset('upload/'. $carImage) }}">
+                                </div>
+                            </div>
+                      </div>
                 </div>
             </div>    
         </div>     

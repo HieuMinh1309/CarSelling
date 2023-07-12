@@ -1,0 +1,18 @@
+.carcontainer{
+    display: flex;
+}
+
+.imgbox{
+    width: 456px;
+}
+
+.mainpic{
+    width: 456px;
+    height: 258px;
+    overflow: hidden;
+}
+
+.mainpic img{
+    width: 456px;
+    height: 258px;
+}
