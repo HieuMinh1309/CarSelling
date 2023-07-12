@@ -53,7 +53,14 @@ class BlogAdminController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
+    {   
+        if ($request->hasFile('imageUP')) {
+            $file = $request->file('imageUP');
+            $filename = $file->getClientOriginalName();
+            $file->move('uploadBlog', $filename);
+            } else {
+                return "image null";
+        }
         $validatedData = $request->validate([
             'title' => 'required',
             'imageBlog' => 'required',

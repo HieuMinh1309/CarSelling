@@ -178,32 +178,17 @@
                         <div class="row">
                             <br>
                                     <div class="button-wrap">
-                                        <label id="text" class="text" for="imageUP">Upload 1</label>
+                                        <label id="text" class="text" for="imageUP">Upload File</label>
                                         <input style="height: 40px;" type="file" name="carImageup" id="carImageup" class="custom-file-input" required>
-                                    </div>
-
-                                    <div class="button-wrap">
-                                        <label id="text" class="text" for="imageUP">Upload 2</label>
-                                        <input style="height: 40px;" type="file" name="carImageup2" id="carImageup2" class="custom-file-input" required>
-</div>
-
-                                    <div class="button-wrap">
-                                        <label id="text" class="text" for="imageUP">Upload 3</label>
-                                        <input style="height: 40px;" type="file" name="carImageup3" id="carImageup3" class="custom-file-input" required>
-                                    </div>
-
-                                    <div class="button-wrap">
-                                        <label id="text" class="text" for="imageUP">Upload 4</label>
-                                        <input style="height: 40px;" type="file" name="carImageup4" id="carImageup4" class="custom-file-input" required>
                                     </div>
                                     <br>
                                     <label id="text" for="carName">Car name:</label>
                                     <br>
                                     <input style="width:20%; height:35px" required type="text" name="carName" placeholder="Car Name">
                                     <br>
-                                        <label id="text">ID Car:</label>
+                                        <label id="text">Vehicle Identificatione Number:</label>
                                     <br>
-                                    <input style="width:20%; height:35px" id="carID" required type="text" name="carID" placeholder="Car ID" pattern="\d+" maxlength="10">
+                                    <input style="width:20%; height:35px" id="carID" required type="text" name="carID" placeholder="VIN" pattern="\d+" maxlength="10">
                                     <br>
                                     <label id="text" for="carPrice">Car Price:</label>
                                     <br>

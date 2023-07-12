@@ -53,6 +53,11 @@
             height:400px;
 
         }
+        .scrollable-table {
+            max-height: 500px; /* Chiều cao tối đa của bảng */
+            overflow: auto; /* Tạo thanh cuộn khi nội dung vượt quá chiều cao */
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,8 +74,6 @@
 		<a href="/admin/compare"class="icon-a"><i class="fa-solid fa-arrows-turn-to-dots"></i> &nbsp;&nbsp;Compare</a>
 		<a href="/admin/upload"class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Logos</a>
         <a id="point" href="/admin/blog"class="icon-a"><i class="fa fa-book-open"></i> &nbsp;&nbsp;Add Blogs</a>
-
-		
 	</div>
     <div id="main">
 
@@ -79,11 +82,13 @@
                 <span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Blogs</span>
                 <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Blogs</span>
             </div>
-            <div class="clearfix"></div>
+
         </div>
         <br/>
         <h1 id="text">Add a new blog</h1>
+        
         <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
+        <div class="scrollable-table">
             @csrf
             <div class="form-group">
                     <div>
@@ -116,6 +121,7 @@
             <br>
         
             <button type="submit" class="btn btn-primary">Upload blogs</button>
+            </div>
         </form>
         <style>
              .custom-file-label {
@@ -129,7 +135,7 @@
                 document.getElementById('imageBlog').value = filename;
         
                 // Update label text with selected file name
-var label = document.querySelector('.custom-file-label');
+                var label = document.querySelector('.custom-file-label');
                 label.textContent = filename;
             });
         </script>

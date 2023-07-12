@@ -134,11 +134,10 @@
     text-align: center;
     }
     img{
-        width:70%;
-        height:auto;
+        width:260px;
+        height:164px;
     }
     .box {
-    display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 10px;
     align-items: start;
@@ -177,11 +176,11 @@
                 <p class="fontt">Auto World is one of the reputable and quality car information <br>
                      and car buying and selling sites in Vietnam</p>
         </section>
-        <section class="blog" id="news" style="margin-top: 50px; margin-left: 230px;">
+        <section class="blog" id="news" style="margin-top: 50px; margin-left: 50px !important;">
             <!-- blog container -->
             <div class="blog-container" id="blog-container" style="margin-left: 15%;">
                 @foreach ($blogs as $blog)
-                <div class="box">
+                <div class="box" style="width: 263px;">
                     <img src="../uploadBlog/{{$blog->imageBlog}}">
                     <h3 class="box-title">{{ $blog->title }}</h3>
                     <p>{{ $blog->description }}</p>
@@ -189,7 +188,7 @@
                 </div>
                 @endforeach
             </div>
-            <div id="pagination-container"></div>
+            <div id="pagination-container" style="margin-left: 150px; margin-top: 24px;"></div>
         </section>
         
         <script>

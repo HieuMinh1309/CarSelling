@@ -39,6 +39,7 @@ Route::post('/contact', [ContactCRUDController::class, 'store1'])->name('contact
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
 Route::get('/about', function () {
     return view('homepage.about');
 });

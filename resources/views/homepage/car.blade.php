@@ -167,6 +167,7 @@
                     </div>
                 </div>
                 @endforeach
+                <div id="pagination-container"></div>
             </div>
         </div>
     </div>
@@ -234,58 +235,54 @@
         </div>
     </div>
 <!-- Footer End -->
-<script>
-$(document).ready(function() {
-  // Đặt số lượng mục trên mỗi trang
-  var itemsPerPage = 4;
 
-  // Tính số trang dựa trên số lượng xe và số lượng mục trên mỗi trang
-  var totalPages = Math.ceil({{ $carlist->count() }} / itemsPerPage);
 
-  // Thiết lập tùy chọn phân trang
-  var options = {
-    dataSource: Array.from({{ $carlist->count() }}, (x, index) => index + 1), // Mảng dữ liệu để phân trang
-    pageSize: itemsPerPage, // Số lượng mục trên mỗi trang
-    showGoInput: true, // Hiển thị trường nhập trang
-    showGoButton: true, // Hiển thị nút đi tới trang
-    callback: function(data, pagination) {
-      // Đổ dữ liệu xe tương ứng vào giao diện
-      var html = '';
-      for (var i = 0; i < data.length; i++) {
-        var car = data[i];
-        html += `
-          <div class="box col-md-3">
-            <div class="car-item">
-              <div class="car-img">
-                <img src="../upload/${car.carImage}" alt="">
-              </div>
-              <div class="titlebox">
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <span class="titlebox">${car.carBrand}</span>
-              </div>
-              <div class="contentbox">
-                <p class="content">${car.carName}</p>
-              </div>
-              <div class="contentbox">
-                <p class="price">${car.carPrice} VNĐ</span></p>
-              </div>
-              <div class="buttonbox">
-                <a class="button" href="{{ route('autoworld_CRUDs.show', ['id' => $car->id]) }}" target="_blank">Car Detail</a>
-              </div>
-            </div>
-          </div>
-        `;
-      }
 
-      // Đưa dữ liệu vào phần tử có id "myDIV"
-      $('#myDIV').html(html);
-    }
-  };
-
-  // Khởi tạo phân trang
-  $('#pagination-container').pagination(options);
-});
-</script>
+    <script>
+            function paginate(pageNumber) {
+                var postsPerPage = 4; // Số lượng bài viết trên mỗi trang
+                var blogBoxes = document.querySelectorAll('.parts-container .box');
+        
+                // Tính vị trí bắt đầu và kết thúc của các bài viết trên trang hiện tại
+                var startIndex = (pageNumber - 1) * postsPerPage;
+                var endIndex = pageNumber * postsPerPage;
+        
+                // Ẩn tất cả các box
+                blogBoxes.forEach(function(box) {
+                    box.style.display = 'none';
+                });
+        
+                // Hiển thị các box ở vị trí thích hợp
+                for (var i = startIndex; i < endIndex && i < blogBoxes.length; i++) {
+                    blogBoxes[i].style.display = 'block';
+                }
+            }
+        
+            function createPagination() {
+                var postsPerPage = 4; // Số lượng bài viết trên mỗi trang
+                var totalPosts = {{$car->count()}}; // Tổng số bài viết
+                var totalPages = Math.ceil(totalPosts / postsPerPage); // Tổng số trang
+        
+                var paginationContainer = document.getElementById('pagination-container');
+                paginationContainer.innerHTML = '';
+        
+                // Tạo các nút phân trang
+                for (var i = 1; i <= totalPages; i++) {
+                    var pageButton = document.createElement('button');
+                    pageButton.textContent = i;
+                    pageButton.classList.add('page-button');
+                    pageButton.addEventListener('click', function() {
+                        paginate(parseInt(this.textContent));
+                    });
+                    paginationContainer.appendChild(pageButton);
+                }
+        
+                // Mặc định hiển thị trang đầu tiên
+                paginate(1);
+            }
+        
+            createPagination();
+        </script>
 
 
     <!-- Back to Top -->

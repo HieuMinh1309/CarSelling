@@ -1,9 +1,12 @@
 .carcontainer{
     display: flex;
+    background-color: gray;
+    border-radius: 4px;
 }
 
 .imgbox{
     width: 456px;
+    margin-left: -12px;
 }
 
 .mainpic{
@@ -15,4 +18,54 @@
 .mainpic img{
     width: 456px;
     height: 258px;
+}
+
+.carname{
+    height: 76px;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-left: -264px;
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 160px;
+    border-radius: 4px;
+}
+
+.carmodel{
+    height: 76px;
+    background-color: #fff;
+    margin-top: 160px;
+    margin-left: -159px;
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 160px;
+    border-radius: 4px;
+}
+
+.carbrand{
+    height: 76px;
+    background-color: #fff;
+    margin-top: 160px;
+    margin-left: 56px;
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 160px;
+    border-radius: 4px;
+}
+
+.sokhung{
+    height: 76px;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-left: -160px;
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 160px;
+    border-radius: 4px;
+}
+
+.containersize{
+    width: 934px;
+    margin-left: 10px;
+    margin-left: 165px !important;
 }

@@ -23,18 +23,8 @@ class AutoworldCRUD extends Controller
             $file = $request->file('carImageup');
             $filename = $file->getClientOriginalName();
             $file->move(public_path('upload'), $filename);
-            $file2 = $request->file('carImageup2');
-            $filename2 = $file2->getClientOriginalName();
-            $file2->move(public_path('upload'), $filename2);
-            $file3 = $request->file('carImageup3');
-            $filename3 = $file3->getClientOriginalName();
-            $file3->move(public_path('upload'), $filename3);
-            $file4 = $request->file('carImageup4');
-            $filename4 = $file4->getClientOriginalName();
-            $file4->move(public_path('upload'), $filename4);
-    
-
-        $carID = $request->input('carID');
+           
+            $carID = $request->input('carID');
 
         if (AutoworldCRUDs::where('carID', $carID)->exists()) {
             return redirect('/admin/car-list')->with('error', 'Car ID already exists');
@@ -42,9 +32,6 @@ class AutoworldCRUD extends Controller
 
         $car = new AutoworldCRUDs;
         $car->carImage = $filename;
-        $car->carImage2 = $filename;
-        $car->carImage3 = $filename;
-        $car->carImage4 = $filename;
         $car->carName = $request->input('carName');
         $car->carBrand = $request->input('carBrand');
         $car->carID = $carID;
@@ -94,9 +81,6 @@ class AutoworldCRUD extends Controller
         $car->carYear = $request->input('carYear');
         $car->carModel = $request->input('carModel');
         $car->carImage = $request->input('carImage');
-        $car->carImage2 = $request->input('carImage2');
-        $car->carImage3 = $request->input('carImage3');
-        $car->carImage4 = $request->input('carImage4');
 
         $car->carDescription = $request->input('carDescription');
 
