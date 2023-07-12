@@ -222,7 +222,6 @@
                                         <select class="form-control-1" name="lai-suat">
                                           <option value="7.5">7.5%</option>
                                           <option value="7.7">7.7%</option>
-                                          <option value="7.5">7.5%</option>
                                           <option value="8.9">8.9%</option>
                                         </select>
                                       </div>

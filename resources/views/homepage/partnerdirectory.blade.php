@@ -127,20 +127,20 @@
             <div class="col-md-6 all-info">
                 <div class="logoGY"></div>
                 <h1 class="single-post-title">
-                    <span class="text-white">Good Year Thành Phố Hồ Chí Minh</span>
+                    <span class="text-white">Good Year Hồ Chí Minh city</span>
                 </h1>
                 <div class="address">
                     <p>
                         <i class="fa fa-location-arrow arrowicon"></i>
-                        <span class="diachi text-white">"195 đường Điện Biên Phủ, Phường 15, quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam"</span>
-                        <a href="https://goo.gl/maps/vRBmEi8eFaPjn3aX8" target="_blank"><span>(Xem Bản Đồ)</span></a>
+                        <span class="diachi text-white">"195  Điện Biên Phủ street, ward 15, Bình Thạnh district, Hồ Chí Minh city, Việt Nam"</span>
+                        <a href="https://goo.gl/maps/vRBmEi8eFaPjn3aX8" target="_blank"><span>(Open Map)</span></a>
                     </p>
                 </div>
                 <hr>
                 <div class="short-info row">
                     <div class="col-md-6>">
                         <p>
-                            <span style="font-weight: 400;">Thứ 2 – Chủ Nhật: 8:00 – 18:00</span>
+                            <span style="font-weight: 400;">Monday – Sunday: 8:00 – 18:00</span>
                         </p>
                     </div>
                     <div class="col-md-6">
@@ -203,9 +203,9 @@
                 </ul>
                 <h3>Our Showrooms</h3>
                 <ul>
-                    <li>919 Đ. Âu Cơ, Phường 14, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam <a href="https://goo.gl/maps/r2iEVsrpojuYCC2i6" target="_blank"><span style="color: pink; font-size: 15px;">(Xem Bản Đồ)</span></a></li>
-                    <li>6 Đ. Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh, Việt Nam <a href="https://goo.gl/maps/xEWV6FgWdXGiKz7x9" target="_blank"><span style="color: pink; font-size: 15px;">(Xem Bản Đồ)</span></a></li>
-                    <li>162 Nguyễn Trọng Tuyển, Phường 8, Phú Nhuận, Thành phố Hồ Chí Minh, Việt Nam <a href="https://goo.gl/maps/mWbSvaoQ5TnzgzGr7" target="_blank"><span style="color: pink; font-size: 15px;">(Xem Bản Đồ)</span></a></li>
+                    <li>919 Đ. Âu Cơ, Phường 14, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam <a href="https://goo.gl/maps/r2iEVsrpojuYCC2i6" target="_blank"><span style="color: pink; font-size: 15px;">(Open Map)</span></a></li>
+                    <li>6 Đ. Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh, Việt Nam <a href="https://goo.gl/maps/xEWV6FgWdXGiKz7x9" target="_blank"><span style="color: pink; font-size: 15px;">(Open Map)</span></a></li>
+                    <li>162 Nguyễn Trọng Tuyển, Phường 8, Phú Nhuận, Thành phố Hồ Chí Minh, Việt Nam <a href="https://goo.gl/maps/mWbSvaoQ5TnzgzGr7" target="_blank"><span style="color: pink; font-size: 15px;">(Open Map)</span></a></li>
                 </ul>
             </div>
         </div>

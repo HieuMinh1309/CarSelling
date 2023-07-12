@@ -198,30 +198,30 @@
                             <div class="imgbox">
                                 <div class="mainpic">
                                 @php
-                                $carImage2 = str_replace('D:\\xampp\\tmp\\', '', $car->carImage2);
+                                $carImage = str_replace('D:\\xampp\\tmp\\', '', $car->carImage);
                                 @endphp
-                                <img src="{{ asset('upload/'. $carImage2) }}">
+                                <img src="{{ asset('upload/'. $carImage) }}">
                                 </div>
                             </div>
                             <div class="contentbox">
                             <h3 style="color: white; display: block; font-size: 38px;">{{$car->carPrice}} VNĐ</h3>
                                 <div class="carname">
-                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -25px;">Car Name:</p>
-                                    <p style="color: red; font-size: 45px; font-weight: bold; margin-top: -25px;">{{$car->carName}}</p>
+                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -20px;">Car Name:</p>
+                                    <p style="color: red; font-size: 29px; font-weight: bold; margin-top: -18px;">{{$car->carName}}</p>
                                 </div>
                                 <div class="carmodel">
-                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -25px;">Car Model:</p>
-                                    <p style="color: red; font-size: 45px; font-weight: bold; margin-top: -25px;">{{$car->carModel}}</p>
+                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -20px;">Car Model:</p>
+                                    <p style="color: red; font-size: 29px; font-weight: bold; margin-top: -18px;">{{$car->carModel}}</p>
                                 </div>
 
                                 <div class="carbrand">
-                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -25px;">Car Brand:</p>
-                                    <p style="color: red; font-size: 45px; font-weight: bold; margin-top: -25px;">{{$car->carBrand}}</p>
+                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -20px;">Car Brand:</p>
+                                    <p style="color: red; font-size: 29px; font-weight: bold; margin-top: -18px;">{{$car->carBrand}}</p>
                                 </div>
 
                                 <div class="sokhung">
-                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -25px;">Identificatione Number:</p>
-                                    <p style="color: red; font-size: 45px; font-weight: bold; margin-top: -25px;">{{$car->carID}}</p>
+                                    <p style="color: red; font-size: 12px; font-weight: bold; margin-top: -20px;">Identificatione Number:</p>
+                                    <p style="color: red; font-size: 29px; font-weight: bold; margin-top: -18px;">{{$car->carID}}</p>
                                 </div>
                             </div>
                       </div>

@@ -73,8 +73,9 @@
         </div>
         <br/>
         <h1 id="text">Create New Logo</h1>
-        <form action="{{ route('uploadLogos.update', $uploadLogo) }}" method="POST" enctype="multipart/form-data">            
+        <form action="{{ route('uploadLogos.update', $uploadLogo->id) }}" method="POST" enctype="multipart/form-data">          
             @csrf
+            @method('PUT') 
             <div class="form-group">
                     <div>
                         <div class="custom-file">

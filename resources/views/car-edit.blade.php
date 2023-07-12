@@ -243,10 +243,6 @@
                     </div>
                 </div>
                 <input  id="carImage" name="carImage" type="text" style="display: none;" required>
-                <input  id="carImage2" name="carImage2" type="text" style="display: none;" required>
-                <input  id="carImage3" name="carImage3" type="text" style="display: none;" required>
-                <input  id="carImage4" name="carImage4" type="text" style="display: none;" required>
-
             </form>
         </div>
 	</div>
